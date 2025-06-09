@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom'; // ← NEW
+
 import { useUser } from '../contexts/userContext';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ProductComponents() {
-  const { user } = useUser();  // Get user from context
+  const { user } = useUser();  // Get logged-in user
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,26 +20,25 @@ function ProductComponents() {
       .catch(error => console.error("Error fetching products:", error));
   }, []);
 
-  // Helper to get image path based on product name
   const getImagePath = (name) => {
     const fileName = name.toLowerCase().replace(/\s+/g, '_') + '.jpg';
     return `/products/${fileName}`;
   };
 
-  // Handle Add to Cart - always adds 1 quantity
   const handleAddToCart = async (productId) => {
     if (!user || !user._id) {
       toast.info("Please log in to add items to your cart.");
       return;
     }
-
     try {
-      const response = await fetch(`https://dl-food-products.onrender.com/api/v1/products/${user._id}/add-to-cart`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId, quantity: 1 }),
-      });
-
+      const response = await fetch(
+        `https://dl-food-products.onrender.com/api/v1/products/${user._id}/add-to-cart`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ productId, quantity: 1 }),
+        }
+      );
       const data = await response.json();
       if (response.ok) {
         toast.success('Added to cart!');
@@ -50,7 +51,6 @@ function ProductComponents() {
     }
   };
 
-  // Render product card with only Add to Cart button
   const renderProductCard = (product, index) => (
     <motion.div
       key={product._id || index}
@@ -77,7 +77,6 @@ function ProductComponents() {
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </div>
-
       <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <h4 style={{ marginBottom: '1rem', color: '#A0522D' }}>{product.name}</h4>
         <p>{product.description}</p>
@@ -86,7 +85,6 @@ function ProductComponents() {
             <li key={idx}>{point}</li>
           ))}
         </ul>
-
         <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'flex-start' }}>
           <Button
             variant="outline-warning"
@@ -94,7 +92,7 @@ function ProductComponents() {
               if (user) {
                 handleAddToCart(product._id);
               } else {
-                window.location.href = '/login'; // Redirect to login if not logged in
+                window.location.href = '/login';
               }
             }}
           >
@@ -124,9 +122,9 @@ function ProductComponents() {
         {secondRow.map(renderProductCard)}
       </div>
 
-      {/* View More Button */}
+      {/* View More Button using NavLink */}
       <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} style={{ textAlign: 'center' }}>
-        <a href="/products">
+        <NavLink to="/products" style={{ textDecoration: 'none' }}>
           <Button
             variant="gradient"
             style={{
@@ -140,10 +138,9 @@ function ProductComponents() {
           >
             View More Products
           </Button>
-        </a>
+        </NavLink>
       </motion.div>
 
-      {/* Toast Container for notifications */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
