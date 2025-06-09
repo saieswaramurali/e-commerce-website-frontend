@@ -1,0 +1,5 @@
+/* Add this CSS to your global stylesheet or in your component's CSS file */
+.carousel-item {
+    transition: transform 2s ease; /* 1 second transition duration for smooth sliding */
+  }
+  

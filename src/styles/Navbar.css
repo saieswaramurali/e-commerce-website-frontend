@@ -1,0 +1,82 @@
+/* NavigationBar.css */
+.navbar {
+    padding-top: 1rem; /* Adjust this value as needed */
+    padding-bottom: 1rem; /* Adjust this value as needed */
+  }
+  
+  /* You might also need to adjust the vertical alignment of the brand and links */
+  .navbar-brand {
+    align-items: center; /* Vertically align the brand text and image */
+    display: flex;
+  }
+  
+  .navbar-nav .nav-link {
+    padding-top: 0.5rem; /* Adjust if needed for vertical alignment */
+    padding-bottom: 0.5rem; /* Adjust if needed for vertical alignment */
+  }
+
+  /* Navbar.css */
+
+/* Navbar.css */
+
+.navbar-custom {
+  background: linear-gradient(90deg, #2e2e2e 0%, #3d3d3d 100%);
+  border-bottom: 3px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #f1f1f1 !important;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .nav-link:hover {
+  color: #d4af37 !important; /* Royal gold on hover */
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-toggler {
+  background-color: #d4af37;
+  border: none;
+}
+
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #2e2e2e;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gold:hover {
+  background-color: #bfa033;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+
+/* Smooth and polished login button styling */
+.login-button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #c29e2e;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(212, 175, 55, 0.4);
+  transform: translateY(-1px);
+}

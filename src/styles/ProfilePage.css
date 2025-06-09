@@ -1,0 +1,7 @@
+.profile-page {
+  background: linear-gradient(135deg, #fffbe6, #fceabb); /* Soft gold gradient */
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Georgia', serif; /* Optional: gives a royal typeface */
+}
+

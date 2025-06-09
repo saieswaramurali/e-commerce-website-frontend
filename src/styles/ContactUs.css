@@ -1,0 +1,13 @@
+.contact-us-section {
+    background-color: #212529; /* Dark Bootstrap */
+    color: white;
+  }
+  
+  .contact-us-section h5 {
+    font-weight: bold;
+  }
+  
+  .contact-us-section p {
+    margin: 0.3rem 0;
+  }
+  

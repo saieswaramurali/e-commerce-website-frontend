@@ -1,0 +1,142 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.left-panel {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-panel .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.left-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.left-panel p {
+  font-size: 1rem;
+}
+
+.right-panel {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #d4af37;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #c29e2e;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: #333;
+  user-select: none;
+}
+
+.show-password input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #c4a000;
+  cursor: pointer;
+}
+
+.show-password label {
+  cursor: pointer;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-links a {
+  color: #4a4a4a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.auth-links a:hover {
+  color: #000;
+}
+
+/* Centered back button styling */
+.back-button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.back-button {
+  text-decoration: none;
+  font-weight: 500;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background-color: #eee;
+  color: #000;
+}

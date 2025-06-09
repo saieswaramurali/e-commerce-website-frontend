@@ -1,0 +1,26 @@
+/* goldenTheme.css */
+.gold-text {
+  color: #D4AF37 !important;
+}
+
+.btn-gold {
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #c39c28;
+  color: white;
+}
+
+.btn-outline-gold {
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  background-color: transparent;
+}
+
+.btn-outline-gold:hover {
+  background-color: #D4AF37;
+  color: white;
+}

@@ -1,0 +1,35 @@
+.about-us-section {
+    background-color: #f8f9fa;
+    padding: 3rem 1rem;
+  }
+  
+  .about-us-section h1 {
+    color: #d4af37;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  .hover-zoom-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .hover-zoom-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  }
+  
