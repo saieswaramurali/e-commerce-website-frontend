@@ -2,7 +2,7 @@ import NavigationBar from "../components/Navbar";
 import CarouselSlides from "../components/Carousels";
 import AboutUs from "../components/AboutUs";
 import ContactUs from "../components/ContactUs";
-import '../styles/home.css' ; 
+import '../styles/Home.css' ; 
 import ProductComponents from "../components/ProductComponents";
 
 function Home() {
